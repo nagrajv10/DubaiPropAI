@@ -155,9 +155,16 @@ function App() {
             </div>
           </div>
 
-          {/* Placeholder for Map or additional charts */}
-          <div className="glass-panel flex-1 flex items-center justify-center border-dashed border-slate-600 relative overflow-hidden">
-             <p className="text-slate-500 text-sm">Interactive Map Integration Ready</p>
+          {/* Dynamic Map Integration */}
+          <div className="glass-panel flex-1 p-0 relative overflow-hidden min-h-[250px] border border-slate-700/50">
+             <iframe
+               title="Property Location View"
+               width="100%"
+               height="100%"
+               style={{ border: 0, minHeight: '250px', background: 'transparent' }}
+               loading="lazy"
+               src={`https://maps.google.com/maps?q=${encodeURIComponent(formData.area + ', Dubai')}&t=&z=13&ie=UTF8&iwloc=&output=embed`}
+             ></iframe>
           </div>
         </section>
 
